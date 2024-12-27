@@ -1,70 +1,84 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+<nav class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
         <!-- Logo and Brand -->
-        <a class="navbar-brand" href="/">
-            <img style="height: 32px !important;" src="assets/logo.png"  class="me-2 h-[32px]" alt="Teachify Logo">
-            <span class="fs-4 fw-semibold">Teachify</span>
+        <a href="/" class="flex items-center space-x-2">
+            <img src="assets/logo.png" alt="Teachify Logo" class="h-8">
+            <span class="text-lg font-semibold">Teachify</span>
         </a>
-        <?php session_start();
-        error_reporting(E_ALL ^ E_NOTICE);
-        ?>
-         
-  
+
         <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button id="menu-toggle" class="md:hidden text-gray-500 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
         </button>
-  
+
         <!-- Navigation Items -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="all-tutors.php">All Tutors</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tutor_request.php">Tutor Requests</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="store.php">Store</a>
-                </li>
-                <?php if (isset($_SESSION['user_id'])): ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="request_tutor.php">Request a Tutor</a>
-                </li>
-                <?php else: ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact">Contact</a>
-                </li>
-            </ul>
-            <?php endif; ?>
-            <!-- Conditional Login/SignUp or Profile -->
-            
+        <div id="menu" class="hidden md:flex space-x-6">
+            <a href="index.php" class="text-gray-700 hover:text-blue-500">Home</a>
+            <a href="all-tutors.php" class="text-gray-700 hover:text-blue-500">All Tutors</a>
+            <a href="tutor_request.php" class="text-gray-700 hover:text-blue-500">Tutor Requests</a>
+            <a href="store.php" class="text-gray-700 hover:text-blue-500">Store</a>
             <?php if (isset($_SESSION['user_id'])): ?>
-                <div class="dropdown">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-person-circle"></i> 
-                        <?php echo htmlspecialchars($_SESSION['email']); ?>
+                <a href="request_tutor.php" class="text-gray-700 hover:text-blue-500">Request a Tutor</a>
+            <?php else: ?>
+                <a href="/contact" class="text-gray-700 hover:text-blue-500">Contact</a>
+            <?php endif; ?>
+        </div>
+
+        <!-- Conditional Login/SignUp or Profile -->
+        <div class="hidden md:flex items-center space-x-4">
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <div class="relative">
+                    <button id="profile-toggle" class="text-gray-700 hover:text-blue-500 focus:outline-none">
+                        <i class="bi bi-person-circle"></i> <?php echo htmlspecialchars($_SESSION['email']); ?>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                        <li><a class="dropdown-item" href="profile.php">Profile</a></li>
-                        <li><a class="dropdown-item" href="logout.php">Logout</a></li>
-                    </ul>
+                    <div id="profile-menu" class="hidden absolute right-0 mt-2 bg-white shadow-lg rounded-md py-2 w-48">
+                        <a href="profile.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
+                        <a href="logout.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                    </div>
                 </div>
             <?php else: ?>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="relative">
+                    <button id="login-toggle" class="text-blue-500 border border-blue-500 px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white focus:outline-none">
                         Login/SignUp
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdown">
-                        <li><a class="dropdown-item" href="login.php">Login</a></li>
-                        <li><a class="dropdown-item" href="signup.php">SignUp</a></li>
-                    </ul>
+                    <div id="login-menu" class="hidden absolute right-0 mt-2 bg-white shadow-lg rounded-md py-2 w-48">
+                        <a href="login.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Login</a>
+                        <a href="signup.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SignUp</a>
+                    </div>
                 </div>
             <?php endif; ?>
         </div>
     </div>
-  </nav>
-  
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
+        <a href="index.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+        <a href="all-tutors.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">All Tutors</a>
+        <a href="tutor_request.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Tutor Requests</a>
+        <a href="store.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Store</a>
+        <?php if (isset($_SESSION['user_id'])): ?>
+            <a href="request_tutor.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Request a Tutor</a>
+        <?php else: ?>
+            <a href="/contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+        <?php endif; ?>
+    </div>
+</nav>
+
+<script>
+    // Toggle Menu Visibility
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Toggle Profile Menu
+    document.getElementById('profile-toggle')?.addEventListener('click', () => {
+        document.getElementById('profile-menu').classList.toggle('hidden');
+    });
+
+    // Toggle Login Menu
+    document.getElementById('login-toggle')?.addEventListener('click', () => {
+        document.getElementById('login-menu').classList.toggle('hidden');
+    });
+</script>

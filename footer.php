@@ -1,69 +1,77 @@
-<footer class="bg-dark text-white py-5">
-    <div class="container">
-        <div class="row">
+<footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Brand Section -->
-            <div class="col-md-3 mb-4">
-                <a href="/" class="d-flex align-items-center text-white text-decoration-none">
-                    <img src="assets/logo.png" height="32" class="me-2" alt="Teachify Logo">
-                    <span class="fs-4 fw-semibold">Teachify</span>
+            <div class="mb-6">
+                <a href="/" class="flex items-center space-x-3 text-white">
+                    <img src="assets/logo.png" class="h-8" alt="Teachify Logo">
+                    <span class="text-xl font-semibold">Teachify</span>
                 </a>
             </div>
 
             <!-- Resources Section -->
-            <div class="col-md-3 mb-4">
-                <h5 class="text-uppercase mb-4">Resources</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Teachify</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Bootstrap</a></li>
+            <div>
+                <h5 class="uppercase font-bold mb-4">Resources</h5>
+                <ul>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-400 hover:text-white">Teachify</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white">Bootstrap</a>
+                    </li>
                 </ul>
             </div>
 
             <!-- Follow Us Section -->
-            <div class="col-md-3 mb-4">
-                <h5 class="text-uppercase mb-4">Follow Us</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Github</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Discord</a></li>
+            <div>
+                <h5 class="uppercase font-bold mb-4">Follow Us</h5>
+                <ul>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-400 hover:text-white">Github</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white">Discord</a>
+                    </li>
                 </ul>
             </div>
 
             <!-- Legal Section -->
-            <div class="col-md-3 mb-4">
-                <h5 class="text-uppercase mb-4">Legal</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Terms & Conditions</a></li>
+            <div>
+                <h5 class="uppercase font-bold mb-4">Legal</h5>
+                <ul>
+                    <li class="mb-2">
+                        <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms & Conditions</a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <hr class="my-4">
-
-        <!-- Bottom Footer -->
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                <span class="text-white-50">
+        <div class="border-t border-gray-700 mt-10 pt-6">
+            <!-- Bottom Footer -->
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="text-center md:text-left text-gray-400">
                     © <?php echo date("Y"); ?> Teachify. All Rights Reserved.
-                </span>
-            </div>
-            
-            <!-- Social Media Icons -->
-            <div class="col-md-6 text-center text-md-end">
-                <a href="#" class="text-white-50 me-3">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="text-white-50 me-3">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="text-white-50 me-3">
-                    <i class="fab fa-discord"></i>
-                </a>
-                <a href="#" class="text-white-50 me-3">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="text-white-50">
-                    <i class="fab fa-dribbble"></i>
-                </a>
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
