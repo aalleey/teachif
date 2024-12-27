@@ -1,6 +1,6 @@
 <?php
 // login.php
-session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -10,12 +10,18 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
-                <form action="process_login.php" method="POST" class="p-4 border rounded shadow-sm">
+    <?php
+    // signup.php
+    
+    include 'navbar.php';
+    ?>
+    <div class="container mt-5  ">
+        <div class="row justify-content-center border rounded shadow lo">
+            <div class="col-md-6 col-lg-4 ">
+                <form action="process_login.php" method="POST" class="p-4 border rounded shadow-sm ">
                     <h2 class="text-center mb-4">Login</h2>
                     
                     <div class="mb-3">
@@ -55,6 +61,13 @@ session_start();
             </div>
         </div>
     </div>
+
+
+    <?php
+    // signup.php
+    
+    include 'footer.php';
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -2,10 +2,13 @@
     <div class="container">
         <!-- Logo and Brand -->
         <a class="navbar-brand" href="/">
-            <img src="assets/logo.png" height="32" class="me-2" alt="Teachify Logo">
+            <img style="height: 32px !important;" src="assets/logo.png"  class="me-2 h-[32px]" alt="Teachify Logo">
             <span class="fs-4 fw-semibold">Teachify</span>
         </a>
-        <?php session_start(); ?>
+        <?php session_start();
+        error_reporting(E_ALL ^ E_NOTICE);
+        ?>
+         
   
         <!-- Mobile Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,13 +22,13 @@
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/all-tutors">All Tutors</a>
+                    <a class="nav-link" href="all-tutors.php">All Tutors</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="tutor_request.php">Tutor Requests</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/store">Store</a>
+                    <a class="nav-link" href="store.php">Store</a>
                 </li>
                 <?php if (isset($_SESSION['user_id'])): ?>
                 <li class="nav-item">

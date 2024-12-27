@@ -1,7 +1,37 @@
-*{
+:root {
+    --bgmain: #ECEFFD;
+}
+
+
+
+
+* {
     box-sizing: border-box;
 }
 
-.main{
-    height: 80vh;
+.st-ca {
+    width: 60vw;
+}
+
+.loginm {
+    background-color: var(--bgmain);
+}
+.lo {
+    margin-bottom: 110px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .lo {
+        margin-top: 110px !important;
+        margin-bottom: 110px;
+        box-shadow: -1px 2px 7px 7px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: -1px 2px 7px 7px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px 2px 7px 7px rgba(0, 0, 0, 0.75);
+    }
+
+    .mobcard {
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
 }
