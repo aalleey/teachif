@@ -15,8 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $price = $_POST['price'];
     $image_url = $_POST['image_url'];
     $user_id = $_SESSION['user_id'];
+    $email = $_SESSION['email'];
+    $emai = $_POST['emai'];
 
-    $sql = "INSERT INTO products (user_id, title, description, price, image_url) VALUES ('$user_id', '$title', '$description', '$price', '$image_url')";
+    $sql = "INSERT INTO products (user_id, email, title, description, price, image_url) VALUES ('$user_id','$emai', '$title', '$description', '$price', '$image_url')";
     if ($conn->query($sql)) {
         header("Location: index.php");
         exit();
@@ -58,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="mb-3">
                 <label for="image_url" class="form-label">Image URL</label>
                 <input type="text" class="form-control" id="image_url" name="image_url" required>
+                <input type="hidden" name="emai" id="emai" value="<?php echo $_SESSION['email'] ?>">
             </div>
             <button type="submit" class="btn btn-primary">Add Product</button>
         </form>

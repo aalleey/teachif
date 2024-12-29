@@ -110,8 +110,8 @@ $res = $conn->query($name);
                         </p>
                         <p><strong>Upload By :</strong>        
                              <?php
-                             if ($isLoggedIn)
-                                 echo htmlspecialchars($_SESSION['email']); ?>
+                             
+                                 echo htmlspecialchars($row['email']); ?>
                         </p>
                     </div>
                 </div>
