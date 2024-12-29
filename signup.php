@@ -9,6 +9,7 @@
     <title>Sign Up as a Teacher</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
 <body>
     <?php
@@ -129,7 +130,7 @@ include 'navbar.php';
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary px-5">Sign Up</button>
+                        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">SignUp</button>
                     </div>
                 </form>
             </div>
@@ -143,6 +144,8 @@ include 'navbar.php';
     include 'footer.php';
     ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
 </html>

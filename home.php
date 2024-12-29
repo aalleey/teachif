@@ -11,8 +11,8 @@
         <!-- Right Content Column -->
         <div class="col-lg-6 col-md-12 p-4">
             <div class="text-center text-lg-start">
-                <h1 class="mb-4 typed-text"></h1>
-                <p class="lead">
+                <h1 class="mb-4 typed-text font-medium"></h1>
+                <p class="lead ">
                     Teachify is an innovative platform designed to bridge the gap
                     between students seeking knowledge and teachers eager to share
                     their expertise. Whether you're a student in search of a
