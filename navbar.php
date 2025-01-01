@@ -28,7 +28,7 @@ if(isset($_POST['login'])) {
 
 
 
-    <nav class="bg-white shadow-md">
+    <nav class="bg-white shadow-md dark:bg-black">
         <div class="container mx-auto flex justify-between items-center p-4">
             <!-- Logo and Brand -->
             <a href="home.php" class="flex items-center space-x-2">
@@ -68,6 +68,7 @@ if(isset($_POST['login'])) {
                             <a href="logout.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
                         </div>
                     </div>
+                    
                 <?php else: ?>
                     <div class="relative">
                         <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
