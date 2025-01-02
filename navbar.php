@@ -1,11 +1,6 @@
 <?php
-
 session_start();
-
-
 error_reporting(E_ERROR);
-
-// Mock login check (replace with your login logic)
 $isLoggedIn = isset($_SESSION['user_id']); // Set after user logs in
 //$userEmail = $isLoggedIn ? $_SESSION['user_email'] : null;
 $first = isset($_SESSION['first_name']);
@@ -64,7 +59,7 @@ if(isset($_POST['login'])) {
                             <i class="bi bi-person-circle"></i> <?php echo htmlspecialchars($_SESSION['email']); ?>
                         </button>
                         <div id="profile-menu" class="hidden absolute right-0 mt-2 bg-white shadow-lg rounded-md py-2 w-48">
-                            <a href="profile.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
+                            <a href="teacher-profile.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
                             <a href="logout.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
                         </div>
                     </div>
